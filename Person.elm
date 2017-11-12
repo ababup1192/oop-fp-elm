@@ -54,4 +54,23 @@ setAge age (Person name _) =
 
 
 
+-- (Person "Takeshi" 15 |> introduce) == "Hi! My name is Takeshi! My age is 15."
+
+
+introduce : Person -> String
+introduce (Person name age) =
+    let
+        hi =
+            "Hi! "
+
+        n =
+            "My name is " ++ name ++ "! "
+
+        a =
+            "My age is " ++ toString age ++ "."
+    in
+        hi ++ n ++ a
+
+
+
 -- (Person "Takeshi" 15 |> toString) == "Person \"Takeshi\" 15"
