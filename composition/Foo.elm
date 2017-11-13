@@ -3,9 +3,8 @@ module Foo exposing (..)
 import Bar exposing (..)
 
 
--- Foo 5 (Bar 6 7)
-
-
+{-| Foo 5 (Bar 6 7)
+-}
 type Foo
     = Foo Int Bar
 
@@ -40,10 +39,8 @@ setZ (Foo x (Bar y _)) z =
     Foo x (Bar y z)
 
 
-
--- (Foo 5 (Bar 6 7) |> calc) == 18
-
-
+{-| (Foo 5 (Bar 6 7) |> calc) == 18
+-}
 calc : Foo -> Int
 calc (Foo x (Bar y z)) =
     x + y + z
